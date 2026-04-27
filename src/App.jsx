@@ -32,23 +32,28 @@ function App() {
     <BrowserRouter>
       <Routes>
 
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/explore" element={<ExplorePage />} />
-        <Route path="/login" element={<PublicRoute><LoginPage /></PublicRoute>} />
-        <Route path="/auth/callback" element={<AuthCallback />} />
-        <Route path="/dashboard" element={<PrivateRoute><DashboardPage /></PrivateRoute>} />
-        <Route path="/topic/:categoryId/:trackId/:stackId/:stepId" element={<PrivateRoute><TopicPage /></PrivateRoute>} />
-        <Route path="/roadmap" element={<PrivateRoute><RoadmapPage /></PrivateRoute>} />
-        <Route path="*" element={<Navigate to="/" replace />} />
-        <Route path="/practice" element={<PrivateRoute><PracticePage /></PrivateRoute>} />
-        <Route path="/interview" element={<InterviewPage />} />
-        <Route path="/interview/:type" element={<InterviewCategoryPage />} />
-        <Route path="/progress" element={<PrivateRoute><Progress /></PrivateRoute>} />
-        <Route path="/settings" element={<PrivateRoute><Settings /></PrivateRoute>} />
-        <Route path="/interview/hr" element={<PrivateRoute><HRInterviewPage /></PrivateRoute>} />
-        <Route path="/interview/technical" element={<PrivateRoute><TechnicalInterviewPage /></PrivateRoute>} />
-        <Route path="/interview/viva" element={<PrivateRoute><VivaInterviewPage /></PrivateRoute>} />
-        <Route path="/interview/mock" element={<PrivateRoute><MockInterviewPage /></PrivateRoute>} />
+      <Routes>
+  <Route path="/" element={<LandingPage />} />
+  <Route path="/explore" element={<ExplorePage />} />
+  <Route path="/login" element={<PublicRoute><LoginPage /></PublicRoute>} />
+  <Route path="/auth/callback" element={<AuthCallback />} />
+  <Route path="/dashboard" element={<PrivateRoute><DashboardPage /></PrivateRoute>} />
+  <Route path="/topic/:categoryId/:trackId/:stackId/:stepId" element={<PrivateRoute><TopicPage /></PrivateRoute>} />
+  <Route path="/roadmap" element={<PrivateRoute><RoadmapPage /></PrivateRoute>} />
+
+  <Route path="/practice" element={<PrivateRoute><PracticePage /></PrivateRoute>} />
+  <Route path="/interview" element={<InterviewPage />} />
+  <Route path="/interview/:type" element={<InterviewCategoryPage />} />
+  <Route path="/progress" element={<PrivateRoute><Progress /></PrivateRoute>} />
+  <Route path="/settings" element={<PrivateRoute><Settings /></PrivateRoute>} />
+  <Route path="/interview/hr" element={<PrivateRoute><HRInterviewPage /></PrivateRoute>} />
+  <Route path="/interview/technical" element={<PrivateRoute><TechnicalInterviewPage /></PrivateRoute>} />
+  <Route path="/interview/viva" element={<PrivateRoute><VivaInterviewPage /></PrivateRoute>} />
+  <Route path="/interview/mock" element={<PrivateRoute><MockInterviewPage /></PrivateRoute>} />
+
+  {/* ALWAYS LAST */}
+  <Route path="*" element={<Navigate to="/" replace />} />
+</Routes>
 
       </Routes>
     </BrowserRouter>
